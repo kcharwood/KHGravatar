@@ -1,4 +1,4 @@
-// UIImageView+KH.h
+// UIImageView+KHGravatar.h
 //
 // Copyright (c) 2012 Kevin Harwood 
 // 
@@ -44,7 +44,7 @@ typedef enum {
  
  Note that all methods return the properly sized image based on the size of the UIImageView and the scale of the screen.
  */
-@interface UIImageView (KHGravater)
+@interface UIImageView (KHGravatar)
 
 /**
  Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address, and sets it the request is finished. If the image is cached locally, the image is set immediately, otherwise, the image is set once the request is finished.
@@ -53,7 +53,7 @@ typedef enum {
  
  @param emailAddress The email address used for the  image request.
  */
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress;
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress;
 
 /**
  Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
@@ -63,7 +63,7 @@ typedef enum {
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:`
  */
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage;
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage;
 
 /**
  Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished. If the email address does not have a , the default image will be returned as specified in the defaultImageType.
@@ -75,7 +75,7 @@ typedef enum {
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:`
  */
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress 
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
                         defaultImageType:(KHDefaultImage)defaultImageType
                                   rating:(KHRating)rating;
@@ -90,7 +90,7 @@ typedef enum {
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:`
  */
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress 
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
                          defaultImageURL:(NSURL*)defaultImageURL
                                   rating:(KHRating)rating;
@@ -107,7 +107,7 @@ typedef enum {
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:` 
  */
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress 
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage *)placeholderImage 
                         defaultImageType:(KHDefaultImage)defaultImageType
                                   rating:(KHRating)rating
