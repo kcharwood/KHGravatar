@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIImageView+KHGravater.h"
+#import "UIImageView+KHGravatar.h"
 #import "UIImageView+AFNetworking.h"
 #import <CommonCrypto/CommonDigest.h>
 
@@ -43,7 +43,7 @@ static NSString * KHGravatarHashForEmailAddress(NSString *emailAddress) {
     return [md5EmailAddress lowercaseString];
 }
 
-@interface UIImageView (_KHGravater)
+@interface UIImageView (_KHGravatar)
 
 - (NSURL*)gravatarURLForEmailAddress:(NSString*)emailAddress;
 - (NSURL*)gravatarURLForEmailAddress:(NSString*)emailAddress defaultImageType:(KHGravatarDefaultImage)defaultImageType rating:(KHGravatarRating)rating;
@@ -54,23 +54,23 @@ static NSString * KHGravatarHashForEmailAddress(NSString *emailAddress) {
 
 @end
 
-@implementation UIImageView (KHGravater)
+@implementation UIImageView (KHGravatar)
 
 
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress{
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress{
     [self setImageWithURL:[self gravatarURLForEmailAddress:emailAddress]];
 }
 
 
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage{
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage{
     [self setImageWithURL:[self gravatarURLForEmailAddress:emailAddress] placeholderImage:placeholderImage];
 }
 
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage defaultImageType:(KHGravatarDefaultImage)defaultImageType rating:(KHGravatarRating)rating{
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage defaultImageType:(KHGravatarDefaultImage)defaultImageType rating:(KHGravatarRating)rating{
     [self setImageWithURL:[self gravatarURLForEmailAddress:emailAddress defaultImageType:defaultImageType rating:rating] placeholderImage:placeholderImage];
 }
 
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress 
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
                          defaultImageURL:(NSURL*)defaultImageURL
                                   rating:(KHGravatarRating)rating{
@@ -78,7 +78,7 @@ static NSString * KHGravatarHashForEmailAddress(NSString *emailAddress) {
 }
 
 
-- (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress 
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage *)placeholderImage 
                         defaultImageType:(KHGravatarDefaultImage)defaultImageType
                                   rating:(KHGravatarRating)rating

@@ -1,4 +1,4 @@
-// UIImageView+KHGravatar.h
+// UIImageView+KH.h
 //
 // Copyright (c) 2012 Kevin Harwood 
 // 
@@ -23,42 +23,42 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    KHGravatarDefaultImageDefault = 0,
-    KHGravatarDefaultImage404,
-    KHGravatarDefaultImageMysteryMan,
-    KHGravatarDefaultImageIdenticon,
-    KHGravatarDefaultImageMonsterId,
-    KHGravatarDefaultImageWavatar,
-    KHGravatarDefaultImageRetro,
-}KHGravatarDefaultImage;
+    KHDefaultImageDefault = 0,
+    KHDefaultImage404,
+    KHDefaultImageMysteryMan,
+    KHDefaultImageIdenticon,
+    KHDefaultImageMonsterId,
+    KHDefaultImageWavatar,
+    KHDefaultImageRetro,
+}KHDefaultImage;
 
 typedef enum {
-    KHGravatarRatingG = 0,
-    KHGravatarRatingPG,
-    KHGravatarRatingR,
-    KHGravatarRatingX,
-}KHGravatarRating;
+    KHRatingG = 0,
+    KHRatingPG,
+    KHRatingR,
+    KHRatingX,
+}KHRating;
 
 /**
- This category adds methods to the UIKit framework's `UIImageView` class to automatically download images from Gravatar for a specified email address. The methods in this category provide support for loading remote images asynchronously from a URL using the `AFNetworking` UIImageView category. This class requires `AFNetworking` to already be included in the project.
+ This category adds methods to the UIKit framework's `UIImageView` class to automatically download images from  for a specified email address. The methods in this category provide support for loading remote images asynchronously from a URL using the `AFNetworking` UIImageView category. This class requires `AFNetworking` to already be included in the project.
  
  Note that all methods return the properly sized image based on the size of the UIImageView and the scale of the screen.
  */
 @interface UIImageView (KHGravater)
 
 /**
- Creates and enqueues an image request operation, which asynchronously downloads the Gravatar image for the specified email address, and sets it the request is finished. If the image is cached locally, the image is set immediately, otherwise, the image is set once the request is finished.
+ Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address, and sets it the request is finished. If the image is cached locally, the image is set immediately, otherwise, the image is set once the request is finished.
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:`
  
- @param emailAddress The email address used for the Gravatar image request.
+ @param emailAddress The email address used for the  image request.
  */
 - (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress;
 
 /**
- Creates and enqueues an image request operation, which asynchronously downloads the Gravatar image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
+ Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
  
- @param emailAddress The email address used for the Gravatar image request.
+ @param emailAddress The email address used for the  image request.
  @param placeholderImage The image to be set initially, until the image request finishes. If `nil`, the image view will not change its image until the image request finishes.
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:`
@@ -66,26 +66,26 @@ typedef enum {
 - (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage;
 
 /**
- Creates and enqueues an image request operation, which asynchronously downloads the Gravatar image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished. If the email address does not have a Gravatar, the default image will be returned as specified in the defaultImageType.
+ Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished. If the email address does not have a , the default image will be returned as specified in the defaultImageType.
  
- @param emailAddress The email address used for the Gravatar image request.
+ @param emailAddress The email address used for the  image request.
  @param placeholderImage The image to be set initially, until the image request finishes. If `nil`, the image view will not change its image until the image request finishes.
- @param defaultImageType The type of image returned if no Gravatar exists for the specified email address.
+ @param defaultImageType The type of image returned if no  exists for the specified email address.
  @param rating The acceptable rating for the image to be used within your application.
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:`
  */
 - (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
-                        defaultImageType:(KHGravatarDefaultImage)defaultImageType
-                                  rating:(KHGravatarRating)rating;
+                        defaultImageType:(KHDefaultImage)defaultImageType
+                                  rating:(KHRating)rating;
 
 /**
- Creates and enqueues an image request operation, which asynchronously downloads the Gravatar image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished. If the email address does not have a Gravatar, the default image will be returned as specified by the defaultImageURL.
+ Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished. If the email address does not have a , the default image will be returned as specified by the defaultImageURL.
  
- @param emailAddress The email address used for the Gravatar image request.
+ @param emailAddress The email address used for the  image request.
  @param placeholderImage The image to be set initially, until the image request finishes. If `nil`, the image view will not change its image until the image request finishes.
- @param defaultImageURL The URL pointing to the image to return if no Gravatar is found for the specified email address.
+ @param defaultImageURL The URL pointing to the image to return if no  is found for the specified email address.
  @param rating The acceptable rating for the image to be used within your application.
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:`
@@ -93,14 +93,14 @@ typedef enum {
 - (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
                          defaultImageURL:(NSURL*)defaultImageURL
-                                  rating:(KHGravatarRating)rating;
+                                  rating:(KHRating)rating;
 
 /**
- Creates and enqueues an image request operation, which asynchronously downloads the Gravatar image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished. If the email address does not have a Gravatar, the default image will be returned as specified by the defaultImageURL.
+ Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished. If the email address does not have a , the default image will be returned as specified by the defaultImageURL.
  
- @param emailAddress The email address used for the Gravatar image request.
+ @param emailAddress The email address used for the  image request.
  @param placeholderImage The image to be set initially, until the image request finishes. If `nil`, the image view will not change its image until the image request finishes.
- @param defaultImageType The type of image returned if no Gravatar exists for the specified email address.
+ @param defaultImageType The type of image returned if no  exists for the specified email address.
  @param rating The acceptable rating for the image to be used within your application.
  @param success A block to be executed when the image request operation finishes successfully, with a status code in the 2xx range, and with an acceptable content type (e.g. `image/png`). This block has no return value and takes three arguments: the request sent from the client, the response received from the server, and the image created from the response data of request. If the image was returned from cache, the request and response parameters will be `nil`.
  @param failure A block object to be executed when the image request operation finishes unsuccessfully, or that finishes successfully. This block has no return value and takes three arguments: the request sent from the client, the response received from the server, and the error object describing the network or parsing error that occurred.
@@ -109,8 +109,8 @@ typedef enum {
  */
 - (void)setImageWithGravaterEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage *)placeholderImage 
-                        defaultImageType:(KHGravatarDefaultImage)defaultImageType
-                                  rating:(KHGravatarRating)rating
+                        defaultImageType:(KHDefaultImage)defaultImageType
+                                  rating:(KHRating)rating
                                  success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image))success
                                  failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error))failure;
 
