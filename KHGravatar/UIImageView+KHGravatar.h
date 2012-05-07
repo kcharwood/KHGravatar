@@ -23,21 +23,21 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    KHDefaultImageDefault = 0,
-    KHDefaultImage404,
-    KHDefaultImageMysteryMan,
-    KHDefaultImageIdenticon,
-    KHDefaultImageMonsterId,
-    KHDefaultImageWavatar,
-    KHDefaultImageRetro,
-}KHDefaultImage;
+    KHGravatarDefaultImageDefault = 0,
+    KHGravatarDefaultImage404,
+    KHGravatarDefaultImageMysteryMan,
+    KHGravatarDefaultImageIdenticon,
+    KHGravatarDefaultImageMonsterId,
+    KHGravatarDefaultImageWavatar,
+    KHGravatarDefaultImageRetro,
+}KHGravatarDefaultImage;
 
 typedef enum {
-    KHRatingG = 0,
-    KHRatingPG,
-    KHRatingR,
-    KHRatingX,
-}KHRating;
+    KHGravatarRatingG = 0,
+    KHGravatarRatingPG,
+    KHGravatarRatingR,
+    KHGravatarRatingX,
+}KHGravatarRating;
 
 /**
  This category adds methods to the UIKit framework's `UIImageView` class to automatically download images from  for a specified email address. The methods in this category provide support for loading remote images asynchronously from a URL using the `AFNetworking` UIImageView category. This class requires `AFNetworking` to already be included in the project.
@@ -77,8 +77,8 @@ typedef enum {
  */
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
-                        defaultImageType:(KHDefaultImage)defaultImageType
-                                  rating:(KHRating)rating;
+                        defaultImageType:(KHGravatarDefaultImage)defaultImageType
+                                  rating:(KHGravatarRating)rating;
 
 /**
  Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished. If the email address does not have a , the default image will be returned as specified by the defaultImageURL.
@@ -93,7 +93,7 @@ typedef enum {
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
                          defaultImageURL:(NSURL*)defaultImageURL
-                                  rating:(KHRating)rating;
+                                  rating:(KHGravatarRating)rating;
 
 /**
  Creates and enqueues an image request operation, which asynchronously downloads the  image for the specified email address. If the image is cached locally, the image is set immediately. Otherwise, the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished. If the email address does not have a , the default image will be returned as specified by the defaultImageURL.
@@ -109,8 +109,8 @@ typedef enum {
  */
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage *)placeholderImage 
-                        defaultImageType:(KHDefaultImage)defaultImageType
-                                  rating:(KHRating)rating
+                        defaultImageType:(KHGravatarDefaultImage)defaultImageType
+                                  rating:(KHGravatarRating)rating
                                  success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image))success
                                  failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error))failure;
 
