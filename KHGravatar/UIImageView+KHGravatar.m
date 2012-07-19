@@ -84,7 +84,7 @@ static NSString * KHGravatarHashForEmailAddress(NSString *emailAddress) {
                                   rating:(KHGravatarRating)rating
                                  success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image))success
                                  failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error))failure{
-    [self setImageWithURLRequest:[NSURLRequest requestWithURL:[self gravatarURLForEmailAddress:emailAddress]]
+    [self setImageWithURLRequest:[NSURLRequest requestWithURL:[self gravatarURLForEmailAddress:emailAddress defaultImageType:defaultImageType rating:rating]]
                 placeholderImage:placeholderImage
                          success:success
                          failure:failure];
