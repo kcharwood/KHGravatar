@@ -27,6 +27,10 @@
 NSString * const KHGravatarBaseURLString = @"https://secure.gravatar.com/avatar/";
 
 static NSString * KHGravatarHashForEmailAddress(NSString *emailAddress) {
+    if (!emailAddress || [emailAddress isEqual:[NSNull null]]) {
+        // if a nil or null string is passed in, hash will crash
+        return @"";
+    }
     emailAddress = [emailAddress stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     emailAddress = [emailAddress lowercaseString];
     
