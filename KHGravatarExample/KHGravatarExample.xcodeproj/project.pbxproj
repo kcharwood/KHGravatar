@@ -50,8 +50,6 @@
 		290FD8A71819BE9D00E77F0F /* KHGravatarExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KHGravatarExampleTests-Info.plist"; sourceTree = "<group>"; };
 		290FD8A91819BE9D00E77F0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		290FD8AB1819BE9D00E77F0F /* KHGravatarExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KHGravatarExampleTests.m; sourceTree = "<group>"; };
-		290FD8B61819BEB200E77F0F /* UIImageView+KHGravatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+KHGravatar.h"; sourceTree = "<group>"; };
-		290FD8B71819BEB200E77F0F /* UIImageView+KHGravatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+KHGravatar.m"; sourceTree = "<group>"; };
 		290FD8B91819BEC300E77F0F /* KHGravatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHGravatar.h; sourceTree = "<group>"; };
 		290FD8BA1819BEC300E77F0F /* KHGravatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHGravatar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,8 +152,6 @@
 		290FD8B51819BEB200E77F0F /* KHGravatar */ = {
 			isa = PBXGroup;
 			children = (
-				290FD8B61819BEB200E77F0F /* UIImageView+KHGravatar.h */,
-				290FD8B71819BEB200E77F0F /* UIImageView+KHGravatar.m */,
 				290FD8B91819BEC300E77F0F /* KHGravatar.h */,
 				290FD8BA1819BEC300E77F0F /* KHGravatar.m */,
 			);
@@ -465,6 +461,7 @@
 				290FD8B11819BE9D00E77F0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		290FD8B21819BE9D00E77F0F /* Build configuration list for PBXNativeTarget "KHGravatarExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +470,7 @@
 				290FD8B41819BE9D00E77F0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
