@@ -21,23 +21,7 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-
-typedef enum {
-    KHGravatarDefaultImageDefault = 0,
-    KHGravatarDefaultImage404,
-    KHGravatarDefaultImageMysteryMan,
-    KHGravatarDefaultImageIdenticon,
-    KHGravatarDefaultImageMonsterId,
-    KHGravatarDefaultImageWavatar,
-    KHGravatarDefaultImageRetro,
-}KHGravatarDefaultImage;
-
-typedef enum {
-    KHGravatarRatingG = 0,
-    KHGravatarRatingPG,
-    KHGravatarRatingR,
-    KHGravatarRatingX,
-}KHGravatarRating;
+#import "KHGravatar.h"
 
 /**
  This category adds methods to the UIKit framework's `UIImageView` class to automatically download images from  for a specified email address. The methods in this category provide support for loading remote images asynchronously from a URL using the `AFNetworking` UIImageView category. This class requires `AFNetworking` to already be included in the project.
