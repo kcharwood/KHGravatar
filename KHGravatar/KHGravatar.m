@@ -1,10 +1,25 @@
 //
 //  KHGravatar.m
-//  KHGravatarExample
 //
-//  Created by Kevin Harwood on 10/24/13.
-//  Copyright (c) 2013 Kevin Harwood. All rights reserved.
+// Copyright (c) 2013 Kevin Harwood
 //
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import "KHGravatar.h"
 #import <CommonCrypto/CommonDigest.h>
@@ -102,6 +117,7 @@ static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
 
 + (NSURL *)URLForGravatarEmailAddress:(NSString*)emailAddress
                      defaultImageType:(KHGravatarDefaultImage)defaultImageType
+                         forceDefault:(BOOL)forceDefault
                                rating:(KHGravatarRating)rating
                                  size:(CGFloat)size{
     NSMutableDictionary * parameters = [NSMutableDictionary dictionary];
@@ -112,6 +128,10 @@ static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
     NSString * type = KHImageStringForImageType(defaultImageType);
     if(type){
         [parameters setValue:type forKey:@"d"];
+    }
+    
+    if(forceDefault){
+        [parameters setValue:@"y" forKey:@"f"];
     }
     
     NSString * ratingString = KHRatingStringForRating(rating);
@@ -125,6 +145,7 @@ static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
 
 + (NSURL *)URLForGravatarEmailAddress:(NSString*)emailAddress
                       defaultImageURL:(NSURL*)defaultImageURL
+                         forceDefault:(BOOL)forceDefault
                                rating:(KHGravatarRating)rating
                                  size:(CGFloat)size{
     NSMutableDictionary * parameters = [NSMutableDictionary dictionary];
@@ -134,6 +155,10 @@ static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
     
     if(defaultImageURL){
         [parameters setValue:defaultImageURL.absoluteString forKey:@"d"];
+    }
+    
+    if(forceDefault){
+        [parameters setValue:@"y" forKey:@"f"];
     }
     
     NSString * ratingString = KHRatingStringForRating(rating);
