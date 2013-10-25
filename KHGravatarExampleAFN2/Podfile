@@ -1,0 +1,6 @@
+platform :ios, :deployment_target => '6.0'
+
+target :'Base' do
+  link_with ['KHGravatarExample']
+  pod 'AFNetworking/UIKit', '~> 2.0'
+end

@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		290FD8871819BE9D00E77F0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290FD8861819BE9D00E77F0F /* Foundation.framework */; };
+		290FD8891819BE9D00E77F0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290FD8881819BE9D00E77F0F /* CoreGraphics.framework */; };
+		290FD88B1819BE9D00E77F0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290FD88A1819BE9D00E77F0F /* UIKit.framework */; };
+		290FD8911819BE9D00E77F0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 290FD88F1819BE9D00E77F0F /* InfoPlist.strings */; };
+		290FD8931819BE9D00E77F0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 290FD8921819BE9D00E77F0F /* main.m */; };
+		290FD8971819BE9D00E77F0F /* KHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 290FD8961819BE9D00E77F0F /* KHAppDelegate.m */; };
+		290FD8991819BE9D00E77F0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 290FD8981819BE9D00E77F0F /* Images.xcassets */; };
+		290FD8A01819BE9D00E77F0F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290FD89F1819BE9D00E77F0F /* XCTest.framework */; };
+		290FD8A11819BE9D00E77F0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290FD8861819BE9D00E77F0F /* Foundation.framework */; };
+		290FD8A21819BE9D00E77F0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290FD88A1819BE9D00E77F0F /* UIKit.framework */; };
+		290FD8AA1819BE9D00E77F0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 290FD8A81819BE9D00E77F0F /* InfoPlist.strings */; };
+		290FD8AC1819BE9D00E77F0F /* KHGravatarExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 290FD8AB1819BE9D00E77F0F /* KHGravatarExampleTests.m */; };
+		290FD8BB1819BEC300E77F0F /* KHGravatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 290FD8BA1819BEC300E77F0F /* KHGravatar.m */; };
+		290FD8BC1819BEC300E77F0F /* KHGravatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 290FD8BA1819BEC300E77F0F /* KHGravatar.m */; };
+		29525692181AB6C000C9D8D0 /* UIImageView+KHGravatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 290FD8B71819BEB200E77F0F /* UIImageView+KHGravatar.m */; };
+		301B709E69F745248C9B7131 /* libPods-Base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B87A90A57C464CB88408E1CD /* libPods-Base.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		290FD8A31819BE9D00E77F0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 290FD87B1819BE9D00E77F0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 290FD8821819BE9D00E77F0F;
+			remoteInfo = KHGravatarExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		290FD8831819BE9D00E77F0F /* KHGravatarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHGravatarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		290FD8861819BE9D00E77F0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		290FD8881819BE9D00E77F0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		290FD88A1819BE9D00E77F0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		290FD88E1819BE9D00E77F0F /* KHGravatarExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KHGravatarExample-Info.plist"; sourceTree = "<group>"; };
+		290FD8901819BE9D00E77F0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		290FD8921819BE9D00E77F0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		290FD8941819BE9D00E77F0F /* KHGravatarExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KHGravatarExample-Prefix.pch"; sourceTree = "<group>"; };
+		290FD8951819BE9D00E77F0F /* KHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KHAppDelegate.h; sourceTree = "<group>"; };
+		290FD8961819BE9D00E77F0F /* KHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KHAppDelegate.m; sourceTree = "<group>"; };
+		290FD8981819BE9D00E77F0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		290FD89E1819BE9D00E77F0F /* KHGravatarExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KHGravatarExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		290FD89F1819BE9D00E77F0F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		290FD8A71819BE9D00E77F0F /* KHGravatarExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KHGravatarExampleTests-Info.plist"; sourceTree = "<group>"; };
+		290FD8A91819BE9D00E77F0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		290FD8AB1819BE9D00E77F0F /* KHGravatarExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KHGravatarExampleTests.m; sourceTree = "<group>"; };
+		290FD8B61819BEB200E77F0F /* UIImageView+KHGravatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+KHGravatar.h"; sourceTree = "<group>"; };
+		290FD8B71819BEB200E77F0F /* UIImageView+KHGravatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+KHGravatar.m"; sourceTree = "<group>"; };
+		290FD8B91819BEC300E77F0F /* KHGravatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHGravatar.h; sourceTree = "<group>"; };
+		290FD8BA1819BEC300E77F0F /* KHGravatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHGravatar.m; sourceTree = "<group>"; };
+		B87A90A57C464CB88408E1CD /* libPods-Base.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Base.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A449F5B76542FB8904D304 /* Pods-Base.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.xcconfig"; path = "Pods/Pods-Base.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		290FD8801819BE9D00E77F0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290FD8891819BE9D00E77F0F /* CoreGraphics.framework in Frameworks */,
+				290FD88B1819BE9D00E77F0F /* UIKit.framework in Frameworks */,
+				290FD8871819BE9D00E77F0F /* Foundation.framework in Frameworks */,
+				301B709E69F745248C9B7131 /* libPods-Base.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		290FD89B1819BE9D00E77F0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290FD8A01819BE9D00E77F0F /* XCTest.framework in Frameworks */,
+				290FD8A21819BE9D00E77F0F /* UIKit.framework in Frameworks */,
+				290FD8A11819BE9D00E77F0F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		290FD87A1819BE9D00E77F0F = {
+			isa = PBXGroup;
+			children = (
+				290FD8B51819BEB200E77F0F /* KHGravatar */,
+				290FD88C1819BE9D00E77F0F /* KHGravatarExample */,
+				290FD8A51819BE9D00E77F0F /* KHGravatarExampleTests */,
+				290FD8851819BE9D00E77F0F /* Frameworks */,
+				290FD8841819BE9D00E77F0F /* Products */,
+				C0A449F5B76542FB8904D304 /* Pods-Base.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		290FD8841819BE9D00E77F0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				290FD8831819BE9D00E77F0F /* KHGravatarExample.app */,
+				290FD89E1819BE9D00E77F0F /* KHGravatarExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		290FD8851819BE9D00E77F0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				290FD8861819BE9D00E77F0F /* Foundation.framework */,
+				290FD8881819BE9D00E77F0F /* CoreGraphics.framework */,
+				290FD88A1819BE9D00E77F0F /* UIKit.framework */,
+				290FD89F1819BE9D00E77F0F /* XCTest.framework */,
+				B87A90A57C464CB88408E1CD /* libPods-Base.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		290FD88C1819BE9D00E77F0F /* KHGravatarExample */ = {
+			isa = PBXGroup;
+			children = (
+				290FD8951819BE9D00E77F0F /* KHAppDelegate.h */,
+				290FD8961819BE9D00E77F0F /* KHAppDelegate.m */,
+				290FD8981819BE9D00E77F0F /* Images.xcassets */,
+				290FD88D1819BE9D00E77F0F /* Supporting Files */,
+			);
+			path = KHGravatarExample;
+			sourceTree = "<group>";
+		};
+		290FD88D1819BE9D00E77F0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				290FD88E1819BE9D00E77F0F /* KHGravatarExample-Info.plist */,
+				290FD88F1819BE9D00E77F0F /* InfoPlist.strings */,
+				290FD8921819BE9D00E77F0F /* main.m */,
+				290FD8941819BE9D00E77F0F /* KHGravatarExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		290FD8A51819BE9D00E77F0F /* KHGravatarExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				290FD8AB1819BE9D00E77F0F /* KHGravatarExampleTests.m */,
+				290FD8A61819BE9D00E77F0F /* Supporting Files */,
+			);
+			path = KHGravatarExampleTests;
+			sourceTree = "<group>";
+		};
+		290FD8A61819BE9D00E77F0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				290FD8A71819BE9D00E77F0F /* KHGravatarExampleTests-Info.plist */,
+				290FD8A81819BE9D00E77F0F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		290FD8B51819BEB200E77F0F /* KHGravatar */ = {
+			isa = PBXGroup;
+			children = (
+				290FD8B61819BEB200E77F0F /* UIImageView+KHGravatar.h */,
+				290FD8B71819BEB200E77F0F /* UIImageView+KHGravatar.m */,
+				290FD8B91819BEC300E77F0F /* KHGravatar.h */,
+				290FD8BA1819BEC300E77F0F /* KHGravatar.m */,
+			);
+			name = KHGravatar;
+			path = ../KHGravatar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		290FD8821819BE9D00E77F0F /* KHGravatarExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 290FD8AF1819BE9D00E77F0F /* Build configuration list for PBXNativeTarget "KHGravatarExample" */;
+			buildPhases = (
+				5928ED8FAE9D473E9555DFCE /* Check Pods Manifest.lock */,
+				290FD87F1819BE9D00E77F0F /* Sources */,
+				290FD8801819BE9D00E77F0F /* Frameworks */,
+				290FD8811819BE9D00E77F0F /* Resources */,
+				9A3A247F02E0474097C3CED4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KHGravatarExample;
+			productName = KHGravatarExample;
+			productReference = 290FD8831819BE9D00E77F0F /* KHGravatarExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		290FD89D1819BE9D00E77F0F /* KHGravatarExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 290FD8B21819BE9D00E77F0F /* Build configuration list for PBXNativeTarget "KHGravatarExampleTests" */;
+			buildPhases = (
+				290FD89A1819BE9D00E77F0F /* Sources */,
+				290FD89B1819BE9D00E77F0F /* Frameworks */,
+				290FD89C1819BE9D00E77F0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				290FD8A41819BE9D00E77F0F /* PBXTargetDependency */,
+			);
+			name = KHGravatarExampleTests;
+			productName = KHGravatarExampleTests;
+			productReference = 290FD89E1819BE9D00E77F0F /* KHGravatarExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		290FD87B1819BE9D00E77F0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KH;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Kevin Harwood";
+				TargetAttributes = {
+					290FD89D1819BE9D00E77F0F = {
+						TestTargetID = 290FD8821819BE9D00E77F0F;
+					};
+				};
+			};
+			buildConfigurationList = 290FD87E1819BE9D00E77F0F /* Build configuration list for PBXProject "KHGravatarExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 290FD87A1819BE9D00E77F0F;
+			productRefGroup = 290FD8841819BE9D00E77F0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				290FD8821819BE9D00E77F0F /* KHGravatarExample */,
+				290FD89D1819BE9D00E77F0F /* KHGravatarExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		290FD8811819BE9D00E77F0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290FD8911819BE9D00E77F0F /* InfoPlist.strings in Resources */,
+				290FD8991819BE9D00E77F0F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		290FD89C1819BE9D00E77F0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290FD8AA1819BE9D00E77F0F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5928ED8FAE9D473E9555DFCE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9A3A247F02E0474097C3CED4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Base-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		290FD87F1819BE9D00E77F0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290FD8931819BE9D00E77F0F /* main.m in Sources */,
+				29525692181AB6C000C9D8D0 /* UIImageView+KHGravatar.m in Sources */,
+				290FD8BB1819BEC300E77F0F /* KHGravatar.m in Sources */,
+				290FD8971819BE9D00E77F0F /* KHAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		290FD89A1819BE9D00E77F0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290FD8BC1819BEC300E77F0F /* KHGravatar.m in Sources */,
+				290FD8AC1819BE9D00E77F0F /* KHGravatarExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		290FD8A41819BE9D00E77F0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 290FD8821819BE9D00E77F0F /* KHGravatarExample */;
+			targetProxy = 290FD8A31819BE9D00E77F0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		290FD88F1819BE9D00E77F0F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				290FD8901819BE9D00E77F0F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		290FD8A81819BE9D00E77F0F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				290FD8A91819BE9D00E77F0F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		290FD8AD1819BE9D00E77F0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		290FD8AE1819BE9D00E77F0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		290FD8B01819BE9D00E77F0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0A449F5B76542FB8904D304 /* Pods-Base.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KHGravatarExample/KHGravatarExample-Prefix.pch";
+				INFOPLIST_FILE = "KHGravatarExample/KHGravatarExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		290FD8B11819BE9D00E77F0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0A449F5B76542FB8904D304 /* Pods-Base.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KHGravatarExample/KHGravatarExample-Prefix.pch";
+				INFOPLIST_FILE = "KHGravatarExample/KHGravatarExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		290FD8B31819BE9D00E77F0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KHGravatarExample.app/KHGravatarExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KHGravatarExample/KHGravatarExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KHGravatarExampleTests/KHGravatarExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		290FD8B41819BE9D00E77F0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KHGravatarExample.app/KHGravatarExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KHGravatarExample/KHGravatarExample-Prefix.pch";
+				INFOPLIST_FILE = "KHGravatarExampleTests/KHGravatarExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		290FD87E1819BE9D00E77F0F /* Build configuration list for PBXProject "KHGravatarExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				290FD8AD1819BE9D00E77F0F /* Debug */,
+				290FD8AE1819BE9D00E77F0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		290FD8AF1819BE9D00E77F0F /* Build configuration list for PBXNativeTarget "KHGravatarExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				290FD8B01819BE9D00E77F0F /* Debug */,
+				290FD8B11819BE9D00E77F0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		290FD8B21819BE9D00E77F0F /* Build configuration list for PBXNativeTarget "KHGravatarExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				290FD8B31819BE9D00E77F0F /* Debug */,
+				290FD8B41819BE9D00E77F0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 290FD87B1819BE9D00E77F0F /* Project object */;
+}
