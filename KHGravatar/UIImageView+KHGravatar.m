@@ -22,8 +22,6 @@
 
 #import "UIImageView+KHGravatar.h"
 #import "UIImageView+AFNetworking.h"
-#import <CommonCrypto/CommonDigest.h>
-
 
 @interface UIImageView (_KHGravatar)
 
