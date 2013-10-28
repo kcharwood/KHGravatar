@@ -112,7 +112,7 @@ static NSString * KHImageStringForImageType(KHGravatarDefaultImage imageType){
     return type;
 }
 
-static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
+static NSURL * KHBuildGravatarURL(NSString * emailAddress, NSDictionary * parameters){
     NSString *emailHash = KHGravatarHashForEmailAddress(emailAddress);
     __block NSString *urlString = [NSString stringWithFormat:@"%@%@.png",kKHGravatarBaseURLString,emailHash];
 
@@ -130,7 +130,7 @@ static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
 @implementation KHGravatar
 
 + (NSURL *)URLForGravatarEmailAddress:(NSString*)emailAddress;{
-    return KHBuildURL(emailAddress, nil);
+    return KHBuildGravatarURL(emailAddress, nil);
 }
 
 + (NSURL *)URLForGravatarEmailAddress:(NSString*)emailAddress
@@ -157,7 +157,7 @@ static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
         [parameters setValue:ratingString forKey:kKHGravatarRatingKeyStringValue];
     }
     
-    return KHBuildURL(emailAddress, parameters);
+    return KHBuildGravatarURL(emailAddress, parameters);
     
 }
 
@@ -184,7 +184,7 @@ static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
         [parameters setValue:ratingString forKey:kKHGravatarRatingKeyStringValue];
     }
     
-    return KHBuildURL(emailAddress, parameters);
+    return KHBuildGravatarURL(emailAddress, parameters);
 
 }
 
