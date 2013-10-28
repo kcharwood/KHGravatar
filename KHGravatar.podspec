@@ -6,12 +6,17 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Kevin Harwood" => "kcharwood@gmail.com" }
   s.source       = { :git => "https://github.com/kcharwood/KHGravatar.git", :tag => "1.0.0" }
-  s.platform     = :ios, '5.0'
-  s.source_files = 'KHGravatar/KHGravatar.{h,m}'
   s.requires_arc = true
+  s.default_subspec = 'Core'
+  
+  s.subspec 'Core' do |ss|
+    ss.platform     = :ios, '5.0'
+    ss.source_files = 'KHGravatar/KHGravatar.{h,m}'
+  end
   
   s.subspec 'AFNetworking' do |ss|
     ss.dependency 'AFNetworking/UIKit', '~> 2.0'
+    ss.dependency 'KHGravatar/Core'
     ss.source_files = 'KHGravatar/UIImageView+KHGravatar.{h,m}'
   end
 end
