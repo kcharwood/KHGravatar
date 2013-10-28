@@ -32,12 +32,18 @@
 
 
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress{
-    [self setImageWithURL:[KHGravatar URLForGravatarEmailAddress:emailAddress]];
+    [self setImageWithGravatarEmailAddress:emailAddress
+                          placeholderImage:nil
+                          defaultImageType:KHGravatarDefaultImageDefault
+                                    rating:KHGravatarRatingG];
 }
 
 
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage{
-    [self setImageWithURL:[KHGravatar URLForGravatarEmailAddress:emailAddress] placeholderImage:placeholderImage];
+    [self setImageWithGravatarEmailAddress:emailAddress
+                          placeholderImage:placeholderImage
+                          defaultImageType:KHGravatarDefaultImageDefault
+                                    rating:KHGravatarRatingG];
 }
 
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage defaultImageType:(KHGravatarDefaultImage)defaultImageType rating:(KHGravatarRating)rating{

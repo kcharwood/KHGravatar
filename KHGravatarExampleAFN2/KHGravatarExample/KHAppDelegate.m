@@ -7,6 +7,7 @@
 //
 
 #import "KHAppDelegate.h"
+#import "KHViewController.h"
 
 @implementation KHAppDelegate
 
@@ -14,8 +15,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    KHViewController * khv = [KHViewController new];
+    [self.window setRootViewController:khv];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+
     return YES;
 }
 

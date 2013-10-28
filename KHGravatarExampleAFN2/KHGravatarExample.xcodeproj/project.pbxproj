@@ -22,6 +22,7 @@
 		290FD8BB1819BEC300E77F0F /* KHGravatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 290FD8BA1819BEC300E77F0F /* KHGravatar.m */; };
 		290FD8BC1819BEC300E77F0F /* KHGravatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 290FD8BA1819BEC300E77F0F /* KHGravatar.m */; };
 		29525692181AB6C000C9D8D0 /* UIImageView+KHGravatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 290FD8B71819BEB200E77F0F /* UIImageView+KHGravatar.m */; };
+		2963A234181EE6760087DB11 /* KHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2963A233181EE6760087DB11 /* KHViewController.m */; };
 		301B709E69F745248C9B7131 /* libPods-Base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B87A90A57C464CB88408E1CD /* libPods-Base.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		290FD8B71819BEB200E77F0F /* UIImageView+KHGravatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+KHGravatar.m"; sourceTree = "<group>"; };
 		290FD8B91819BEC300E77F0F /* KHGravatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHGravatar.h; sourceTree = "<group>"; };
 		290FD8BA1819BEC300E77F0F /* KHGravatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHGravatar.m; sourceTree = "<group>"; };
+		2963A232181EE6760087DB11 /* KHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHViewController.h; sourceTree = "<group>"; };
+		2963A233181EE6760087DB11 /* KHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHViewController.m; sourceTree = "<group>"; };
 		B87A90A57C464CB88408E1CD /* libPods-Base.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Base.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A449F5B76542FB8904D304 /* Pods-Base.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.xcconfig"; path = "Pods/Pods-Base.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +128,8 @@
 				290FD8961819BE9D00E77F0F /* KHAppDelegate.m */,
 				290FD8981819BE9D00E77F0F /* Images.xcassets */,
 				290FD88D1819BE9D00E77F0F /* Supporting Files */,
+				2963A232181EE6760087DB11 /* KHViewController.h */,
+				2963A233181EE6760087DB11 /* KHViewController.m */,
 			);
 			path = KHGravatarExample;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				29525692181AB6C000C9D8D0 /* UIImageView+KHGravatar.m in Sources */,
 				290FD8BB1819BEC300E77F0F /* KHGravatar.m in Sources */,
 				290FD8971819BE9D00E77F0F /* KHAppDelegate.m in Sources */,
+				2963A234181EE6760087DB11 /* KHViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
