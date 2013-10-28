@@ -55,6 +55,7 @@
  @param emailAddress The email address used for the  image request.
  @param placeholderImage The image to be set initially, until the image request finishes. If `nil`, the image view will not change its image until the image request finishes.
  @param defaultImageType The type of image returned if no  exists for the specified email address.
+ @param forceDefault Force the default image type to load regardless of whether or not a gravatar is found for the specified email address.
  @param rating The acceptable rating for the image to be used within your application.
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:`
@@ -62,6 +63,7 @@
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
                         defaultImageType:(KHGravatarDefaultImage)defaultImageType
+                            forceDefault:(BOOL)forceDefault
                                   rating:(KHGravatarRating)rating;
 
 /**
@@ -70,6 +72,7 @@
  @param emailAddress The email address used for the  image request.
  @param placeholderImage The image to be set initially, until the image request finishes. If `nil`, the image view will not change its image until the image request finishes.
  @param defaultImageURL The URL pointing to the image to return if no  is found for the specified email address.
+ @param forceDefault Force the default image type to load regardless of whether or not a gravatar is found for the specified email address.
  @param rating The acceptable rating for the image to be used within your application.
  
  @discussion By default, url requests have a cache policy of `NSURLCacheStorageAllowed` and a timeout interval of 30 seconds, and are set to use HTTP pipelining, and not handle cookies. To configure url requests differently, use `setImageWithURLRequest:placeholderImage:success:failure:`
@@ -77,6 +80,7 @@
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
                          defaultImageURL:(NSURL*)defaultImageURL
+                            forceDefault:(BOOL)forceDefault
                                   rating:(KHGravatarRating)rating;
 
 /**
@@ -85,6 +89,7 @@
  @param emailAddress The email address used for the  image request.
  @param placeholderImage The image to be set initially, until the image request finishes. If `nil`, the image view will not change its image until the image request finishes.
  @param defaultImageType The type of image returned if no  exists for the specified email address.
+ @param forceDefault Force the default image type to load regardless of whether or not a gravatar is found for the specified email address.
  @param rating The acceptable rating for the image to be used within your application.
  @param success A block to be executed when the image request operation finishes successfully, with a status code in the 2xx range, and with an acceptable content type (e.g. `image/png`). This block has no return value and takes three arguments: the request sent from the client, the response received from the server, and the image created from the response data of request. If the image was returned from cache, the request and response parameters will be `nil`.
  @param failure A block object to be executed when the image request operation finishes unsuccessfully, or that finishes successfully. This block has no return value and takes three arguments: the request sent from the client, the response received from the server, and the error object describing the network or parsing error that occurred.
@@ -94,6 +99,7 @@
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage *)placeholderImage 
                         defaultImageType:(KHGravatarDefaultImage)defaultImageType
+                            forceDefault:(BOOL)forceDefault
                                   rating:(KHGravatarRating)rating
                                  success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image))success
                                  failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error))failure;

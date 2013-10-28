@@ -42,7 +42,11 @@
     [_imageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.view addSubview:_imageView];
     
-    [_imageView setImageWithGravatarEmailAddress:@"kcharwood@gmail.com"];
+    [_imageView setImageWithGravatarEmailAddress:@"test@gmail.com"
+                                placeholderImage:nil
+                                defaultImageType:KHGravatarDefaultImageIdenticon
+                                    forceDefault:YES
+                                          rating:KHGravatarRatingG];
 }
 
 @end

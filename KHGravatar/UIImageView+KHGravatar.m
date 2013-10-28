@@ -35,6 +35,7 @@
     [self setImageWithGravatarEmailAddress:emailAddress
                           placeholderImage:nil
                           defaultImageType:KHGravatarDefaultImageDefault
+                              forceDefault:NO
                                     rating:KHGravatarRatingG];
 }
 
@@ -43,13 +44,18 @@
     [self setImageWithGravatarEmailAddress:emailAddress
                           placeholderImage:placeholderImage
                           defaultImageType:KHGravatarDefaultImageDefault
+                              forceDefault:NO
                                     rating:KHGravatarRatingG];
 }
 
-- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress placeholderImage:(UIImage*)placeholderImage defaultImageType:(KHGravatarDefaultImage)defaultImageType rating:(KHGravatarRating)rating{
+- (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress
+                        placeholderImage:(UIImage*)placeholderImage
+                        defaultImageType:(KHGravatarDefaultImage)defaultImageType
+                            forceDefault:(BOOL)forceDefault
+                                  rating:(KHGravatarRating)rating{
     NSURL * url = [KHGravatar URLForGravatarEmailAddress:emailAddress
                                         defaultImageType:defaultImageType
-                                            forceDefault:NO
+                                            forceDefault:forceDefault
                                                   rating:rating
                                                     size:[self imageSize]];
     [self setImageWithURL:url placeholderImage:placeholderImage];
@@ -58,10 +64,11 @@
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage*)placeholderImage
                          defaultImageURL:(NSURL*)defaultImageURL
+                            forceDefault:(BOOL)forceDefault
                                   rating:(KHGravatarRating)rating{
     NSURL * url = [KHGravatar URLForGravatarEmailAddress:emailAddress
                                          defaultImageURL:defaultImageURL
-                                            forceDefault:NO
+                                            forceDefault:forceDefault
                                                   rating:rating
                                                     size:[self imageSize]];
     [self setImageWithURL:url placeholderImage:placeholderImage];
@@ -71,12 +78,13 @@
 - (void)setImageWithGravatarEmailAddress:(NSString*)emailAddress 
                         placeholderImage:(UIImage *)placeholderImage 
                         defaultImageType:(KHGravatarDefaultImage)defaultImageType
+                            forceDefault:(BOOL)forceDefault
                                   rating:(KHGravatarRating)rating
                                  success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image))success
                                  failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error))failure{
     NSURL * url = [KHGravatar URLForGravatarEmailAddress:emailAddress
                                         defaultImageType:defaultImageType
-                                            forceDefault:NO
+                                            forceDefault:forceDefault
                                                   rating:rating
                                                     size:[self imageSize]];
     [self setImageWithURLRequest:[NSURLRequest requestWithURL:url]
