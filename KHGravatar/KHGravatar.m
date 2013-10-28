@@ -24,7 +24,25 @@
 #import "KHGravatar.h"
 #import <CommonCrypto/CommonDigest.h>
 
-NSString * const KHGravatarBaseURLString = @"https://secure.gravatar.com/avatar/";
+NSString * const kKHGravatarBaseURLString = @"https://secure.gravatar.com/avatar/";
+
+NSString * const kKHGravatarRatingKeyStringValue = @"r";
+NSString * const kKHGravatarGRatingStringValue = @"g";
+NSString * const kKHGravatarPGRatingStringValue = @"pg";
+NSString * const kKHGravatarRRatingStringValue = @"r";
+NSString * const kKHGravatarXRatingStringValue = @"x";
+
+NSString * const kKHGravatarForceDefaultKeyStringValue = @"f";
+NSString * const kKHGravatarDefaultImageKeyStringValue = @"d";
+NSString * const kKHGravatar404DefaultImageStringValue = @"404";
+NSString * const kKHGravatarMysteryManDefaultImageStringValue = @"mysteryman";
+NSString * const kKHGravatarIdenticonDefaultImageStringValue = @"identicon";
+NSString * const kKHGravatarMonsterIdDefaultImageStringValue = @"monsterid";
+NSString * const kKHGravatarWavatarDefaultImageStringValue = @"wavatar";
+NSString * const kKHGravatarRetroDefaultImageStringValue = @"retro";
+
+NSString * const kKHGravatarSizeKeyStringValue = @"s";
+
 
 static NSString * KHGravatarHashForEmailAddress(NSString *emailAddress) {
     if (!emailAddress || [emailAddress isEqual:[NSNull null]]) {
@@ -51,16 +69,16 @@ static NSString * KHRatingStringForRating(KHGravatarRating rating){
     NSString * ratingString = nil;
     switch (rating) {
         case KHGravatarRatingG:
-            ratingString = @"g";
+            ratingString = kKHGravatarGRatingStringValue;
             break;
         case KHGravatarRatingPG:
-            ratingString = @"pg";
+            ratingString = kKHGravatarPGRatingStringValue;
             break;
         case KHGravatarRatingR:
-            ratingString = @"r";
+            ratingString = kKHGravatarRRatingStringValue;
             break;
         case KHGravatarRatingX:
-            ratingString = @"x";
+            ratingString = kKHGravatarXRatingStringValue;
         default:
             break;
     }
@@ -71,22 +89,22 @@ static NSString * KHImageStringForImageType(KHGravatarDefaultImage imageType){
     NSString * type = nil;
     switch (imageType) {
         case KHGravatarDefaultImage404:
-            type = @"404";
+            type = kKHGravatar404DefaultImageStringValue;
             break;
         case KHGravatarDefaultImageMysteryMan:
-            type = @"mm";
+            type = kKHGravatarMysteryManDefaultImageStringValue;
             break;
         case KHGravatarDefaultImageIdenticon:
-            type = @"identicon";
+            type = kKHGravatarIdenticonDefaultImageStringValue;
             break;
         case KHGravatarDefaultImageMonsterId:
-            type = @"monsterid";
+            type = kKHGravatarMonsterIdDefaultImageStringValue;
             break;
         case KHGravatarDefaultImageWavatar:
-            type = @"wavatar";
+            type = kKHGravatarWavatarDefaultImageStringValue;
             break;
         case KHGravatarDefaultImageRetro:
-            type = @"retro";
+            type = kKHGravatarRetroDefaultImageStringValue;
             break;
         default:
             break;
@@ -96,7 +114,7 @@ static NSString * KHImageStringForImageType(KHGravatarDefaultImage imageType){
 
 static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
     NSString *emailHash = KHGravatarHashForEmailAddress(emailAddress);
-    __block NSString *urlString = [NSString stringWithFormat:@"%@%@.png",KHGravatarBaseURLString,emailHash];
+    __block NSString *urlString = [NSString stringWithFormat:@"%@%@.png",kKHGravatarBaseURLString,emailHash];
 
     //Build out the parameters
     __block NSInteger counter = 0;
@@ -122,21 +140,21 @@ static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
                                  size:(CGFloat)size{
     NSMutableDictionary * parameters = [NSMutableDictionary dictionary];
     if(size>=0){
-        [parameters setValue:[NSString stringWithFormat:@"%0.0f",size] forKey:@"s"];
+        [parameters setValue:[NSString stringWithFormat:@"%0.0f",size] forKey:kKHGravatarSizeKeyStringValue];
     }
     
     NSString * type = KHImageStringForImageType(defaultImageType);
     if(type){
-        [parameters setValue:type forKey:@"d"];
+        [parameters setValue:type forKey:kKHGravatarDefaultImageKeyStringValue];
     }
     
     if(forceDefault){
-        [parameters setValue:@"y" forKey:@"f"];
+        [parameters setValue:@"y" forKey:kKHGravatarForceDefaultKeyStringValue];
     }
     
     NSString * ratingString = KHRatingStringForRating(rating);
     if(ratingString){
-        [parameters setValue:ratingString forKey:@"r"];
+        [parameters setValue:ratingString forKey:kKHGravatarRatingKeyStringValue];
     }
     
     return KHBuildURL(emailAddress, parameters);
@@ -150,20 +168,20 @@ static NSURL * KHBuildURL(NSString * emailAddress, NSDictionary * parameters){
                                  size:(CGFloat)size{
     NSMutableDictionary * parameters = [NSMutableDictionary dictionary];
     if(size>=0){
-        [parameters setValue:[NSString stringWithFormat:@"%0.0f",size] forKey:@"s"];
+        [parameters setValue:[NSString stringWithFormat:@"%0.0f",size] forKey:kKHGravatarSizeKeyStringValue];
     }
     
     if(defaultImageURL){
-        [parameters setValue:defaultImageURL.absoluteString forKey:@"d"];
+        [parameters setValue:defaultImageURL.absoluteString forKey:kKHGravatarDefaultImageKeyStringValue];
     }
     
     if(forceDefault){
-        [parameters setValue:@"y" forKey:@"f"];
+        [parameters setValue:@"y" forKey:kKHGravatarForceDefaultKeyStringValue];
     }
     
     NSString * ratingString = KHRatingStringForRating(rating);
     if(ratingString){
-        [parameters setValue:ratingString forKey:@"r"];
+        [parameters setValue:ratingString forKey:kKHGravatarRatingKeyStringValue];
     }
     
     return KHBuildURL(emailAddress, parameters);
